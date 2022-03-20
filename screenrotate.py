@@ -7,16 +7,13 @@ Prank your friends by unusual continuous rotation of screen.
 import rotatescreen
 import time
 
-screen = rotatescreen.get_primary_display()
-start_pos = screen.current_orientation
 
-consent = input("Don't press 'y' and 'enter' key: ")
-if consent == 'y':
+def action():
     print("************ 🎉🎉 Ready for some action !!! 🎉🎉 ************")
     time.sleep(2)
 
     print("5...")
-    # For God's sake dont delete this statement else you'll need to say Goodbye to the system.
+    # For God's sake dont delete this sleep statement else you'll need to say Goodbye to the system.
     time.sleep(1)
     print("4...")
     time.sleep(1)
@@ -27,12 +24,20 @@ if consent == 'y':
     print("1...")
     time.sleep(1)
 
+
+screen = rotatescreen.get_primary_display()
+start_pos = screen.current_orientation
+
+consent = input("Don't press 'y' and 'enter' key: ")
+
+if consent == 'y':
+    action()
 else:
     counter = 0
     while True:
         if counter >= 5:
             if counter == 5:
-                print("__________ Hey idiot, don't you understand? 👿 👿_________")
+                print("__________ Hey idiot, don't you understand? 👿 👿 _________")
             elif counter > 5:
                 consent = input("Press 'y' and 'enter' key: ")
                 if counter >= 10:
@@ -52,13 +57,14 @@ else:
                     break
         else:
             consent = input("Don't press 'y' and 'enter' key: ")
+            # action()
 
         if consent == 'y':
             break
         else:
             pass
             counter = counter + 1
-
+    action()
 
 while True:
     try:
