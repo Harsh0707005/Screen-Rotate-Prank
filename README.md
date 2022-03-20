@@ -13,4 +13,4 @@ If your friend becomes mad at you because he doesn't kow how to stop it and atte
   
 # Disclaimer
 
-I will not be responsible if your friend runs behind you with a strick in his hand 😅😅.
+I will not be responsible if your friend runs behind you with a stick in his hand 😅😅.
