@@ -1,4 +1,4 @@
-# Screen-Rotate-Prank
+# Screen Rotate Prank
 Prank your friends by executing this script in his/her PC and rest will be history 😂
 <br>
 # Usage:
