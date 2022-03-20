@@ -68,4 +68,5 @@ while True:
             time.sleep(1.5)
     except KeyboardInterrupt:
         screen.rotate_to(start_pos)
+        print("So got the mantra to stop this beast... 😥")
         break
