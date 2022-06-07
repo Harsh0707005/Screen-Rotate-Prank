@@ -1,3 +1,4 @@
+
 # Author: Harsh Master
 '''
 Prank your friends by unusual continuous rotation of screen.
@@ -13,7 +14,6 @@ def action():
     time.sleep(2)
 
     print("5...")
-    # For God's sake dont delete this sleep statement else you'll need to say Goodbye to the system.
     time.sleep(1)
     print("4...")
     time.sleep(1)
@@ -28,15 +28,15 @@ def action():
 screen = rotatescreen.get_primary_display()
 start_pos = screen.current_orientation
 
-consent = input("Don't press 'y' and 'enter' key: ")
+consent = input("Don't enter 'y': ")
 
 if consent == 'y':
     action()
 else:
     counter = 0
     while True:
-        if counter >= 5:
-            if counter == 5:
+        if counter >= 4:
+            if counter == 4:
                 print("__________ Hey idiot, don't you understand? 👿 👿 _________")
             elif counter > 5:
                 consent = input("Press 'y' and 'enter' key: ")
@@ -56,8 +56,7 @@ else:
                     time.sleep(1)
                     break
         else:
-            consent = input("Don't press 'y' and 'enter' key: ")
-            # action()
+            consent = input("Don't enter 'y': ")
 
         if consent == 'y':
             break
@@ -71,6 +70,7 @@ while True:
         for i in range(1, 5):
             pos = abs((start_pos - i*90) % 360)  # getting screen position
             screen.rotate_to(pos)
+            # For God's sake dont delete this sleep statement else you'll need to say Goodbye to the system.
             time.sleep(1.5)
     except KeyboardInterrupt:
         screen.rotate_to(start_pos)
